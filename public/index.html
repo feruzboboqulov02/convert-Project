@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Universal Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>Universal Converter</h1>
+
+    <!-- Length Converter -->
+    <section class="card">
+      <h2>Length Converter</h2>
+      <div class="row">
+        <input type="number" id="lengthValue" placeholder="Enter value" />
+        <select id="lengthFrom">
+          <option value="m">Meters</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+        </select>
+      </div>
+      <div class="row">
+        <input type="text" id="lengthOutput" placeholder="Result" readonly />
+        <select id="lengthTo">
+          <option value="m">Meters</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+        </select>
+      </div>
+      <button onclick="convertLength()">Convert</button>
+    </section>
+
+    <!-- Currency Converter -->
+    <section class="card">
+      <h2>Currency Converter</h2>
+      <div class="row">
+        <input type="number" id="currencyAmount" placeholder="Amount" />
+        <select id="currencyFrom">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="UZS">UZS</option>
+        </select>
+      </div>
+      <div class="row">
+        <input type="text" id="currencyOutput" placeholder="Result" readonly />
+        <select id="currencyTo">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="UZS">UZS</option>
+        </select>
+      </div>
+      <button onclick="convertCurrency()">Convert</button>
+    </section>
+
+    <!-- Temperature Converter -->
+    <section class="card">
+      <h2>Temperature Converter</h2>
+      <div class="row">
+        <input type="number" id="tempValue" placeholder="Enter value" />
+        <select id="tempFrom">
+          <option value="C">Celsius</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+        </select>
+      </div>
+      <div class="row">
+        <input type="text" id="tempOutput" placeholder="Result" readonly />
+        <select id="tempTo">
+          <option value="C">Celsius</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+        </select>
+      </div>
+      <button onclick="convertTemperature()">Convert</button>
+    </section>
+
+    <!-- Weight Converter -->
+    <section class="card">
+      <h2>Weight Converter</h2>
+      <div class="row">
+        <input type="number" id="weightValue" placeholder="Enter value" />
+        <select id="weightFrom">
+          <option value="kg">Kilograms</option>
+          <option value="lb">Pounds</option>
+          <option value="g">Grams</option>
+        </select>
+      </div>
+      <div class="row">
+        <input type="text" id="weightOutput" placeholder="Result" readonly />
+        <select id="weightTo">
+          <option value="kg">Kilograms</option>
+          <option value="lb">Pounds</option>
+          <option value="g">Grams</option>
+        </select>
+      </div>
+      <button onclick="convertWeight()">Convert</button>
+    </section>
+
+    <!-- Time Converter -->
+    <section class="card">
+      <h2>Time Converter</h2>
+      <div class="row">
+        <input type="number" id="timeValue" placeholder="Enter value" />
+        <select id="timeFrom">
+          <option value="hours">Hours</option>
+          <option value="minutes">Minutes</option>
+          <option value="seconds">Seconds</option>
+        </select>
+      </div>
+      <div class="row">
+        <input type="text" id="timeOutput" placeholder="Result" readonly />
+        <select id="timeTo">
+          <option value="hours">Hours</option>
+          <option value="minutes">Minutes</option>
+          <option value="seconds">Seconds</option>
+        </select>
+      </div>
+      <button onclick="convertTime()">Convert</button>
+    </section>
+
+  </div> <!-- END of .container -->
+
+  <script src="script.js"></script>
+</body>

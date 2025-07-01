@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #120850; /* matte blue */
+  font-family: 'Orbitron', 'Rubik', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 15px;
+  gap: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Glassmorphism style card */
+.card {
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  border-radius: 16px;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  backdrop-filter: blur(12px);            /* blur behind */
+  -webkit-backdrop-filter: blur(12px);    /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* soft border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);  /* soft glow */
+  transition: transform 0.3s ease;
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+
+
+.row input,
+.row select {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 16px;
+  width: 48%;
+}
+
+/* Fix dropdown option visibility */
+.row select option {
+  color: black;
+  background-color: white;
+}
+
+.row input::placeholder {
+  color: #e0e0e0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  background: rgba(0, 170, 255, 0.9);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 170, 255, 0.4);
+}
+
+button:hover {
+  background: rgba(0, 140, 230, 1);
+  transform: translateY(-2px);
+}
+.card:hover {
+  transform: scale(1.02); /* subtle zoom effect */
+}
