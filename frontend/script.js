@@ -66,30 +66,30 @@ window.convertTime = function () {
   output.value = converted.toFixed(2);
 };
 
-async function convertCurrency() {
-  const amount = document.getElementById('currencyAmount').value;
-  const from = document.getElementById('currencyFrom').value;
-  const to = document.getElementById('currencyTo').value;
+function convertCurrency() {
+  const amount = document.getElementById('currencyAmount')?.value;
+  const from = document.getElementById('currencyFrom')?.value;
+  const to = document.getElementById('currencyTo')?.value;
   const output = document.getElementById('currencyOutput');
 
   if (!amount || !from || !to) {
-    output.value = 'Missing input';
+    output.value = 'Please enter valid input';
     return;
   }
 
-  try {
-    const res = await fetch(`http://localhost:5000/api/convert-currency?from=${from}&to=${to}&amount=${amount}`);
-    const data = await res.json();
-
-    if (!data.result) {
-      output.value = 'Conversion failed';
-      return;
-    }
-
-    output.value = data.result.toFixed(2);
-  } catch (err) {
-    console.error('Currency API error:', err);
-    output.value = 'Error';
-  }
+  fetch(`http://localhost:5000/api/convert-currency?from=${from}&to=${to}&amount=${amount}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.result !== undefined) {
+        output.value = data.result.toFixed(2);
+      } else {
+        output.value = 'Conversion failed';
+      }
+    })
+    .catch(err => {
+      console.error('Currency conversion error:', err);
+      output.value = 'Error';
+    });
 }
+
 

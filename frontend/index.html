@@ -45,26 +45,46 @@
     </section>
 
     <!-- Currency -->
+    
+
     <section class="card">
       <h2>Currency</h2>
       <div class="row">
         <input type="number" id="currencyAmount" placeholder="Amount" />
         <div class="custom-select">
+          <!-- Add more currency options -->
           <select id="currencyFrom">
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="UZS">UZS</option>
+            <option value="GBP">GBP (British Pound)</option>
+            <option value="JPY">JPY (Japanese Yen)</option>
+            <option value="AUD">AUD (Australian Dollar)</option>
+            <option value="CAD">CAD (Canadian Dollar)</option>
+            <option value="CHF">CHF (Swiss Franc)</option>
+            <option value="CNY">CNY (Chinese Yuan)</option>
+            <option value="INR">INR (Indian Rupee)</option>
           </select>
+
         </div>
       </div>
       <div class="row">
         <input type="text" id="currencyOutput" placeholder="Result" readonly />
         <div class="custom-select">
+          <!-- Add more currency options -->
           <select id="currencyTo">
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="UZS">UZS</option>
+            <option value="GBP">GBP (British Pound)</option>
+            <option value="JPY">JPY (Japanese Yen)</option>
+            <option value="AUD">AUD (Australian Dollar)</option>
+            <option value="CAD">CAD (Canadian Dollar)</option>
+            <option value="CHF">CHF (Swiss Franc)</option>
+            <option value="CNY">CNY (Chinese Yuan)</option>
+            <option value="INR">INR (Indian Rupee)</option>
           </select>
+
         </div>
       </div>
       <button onclick="convertCurrency()">Convert</button>
